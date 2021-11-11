@@ -7,6 +7,8 @@ import { mixer2, action2, mixer3, action3, model_kurek } from './loader2';
 
 export const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2()
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -95,6 +97,8 @@ const controls = new OrbitControls(camera, renderer.domElement);
 //camera.position.set( 0, 20, 100 );
 controls.update();
 controls.autoRotate = false;
+renderer.domElement.addEventListener('click', onClick, false);
+
 const clock = new THREE.Clock();
 
 const animate = function () {
@@ -135,5 +139,25 @@ const animate = function () {
 }
 
 };
+
+function onClick(event) {
+
+  event.preventDefault();
+
+  mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+  mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
+
+  raycaster.setFromCamera(mouse, camera);
+
+  var intersects = raycaster.intersectObjects(scene.children, true);
+
+  if (intersects.length > 0) {
+
+    console.log('Intersection:', intersects[0]);
+
+  }
+
+}
+
 
 animate();
