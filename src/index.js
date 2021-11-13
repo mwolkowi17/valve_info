@@ -151,10 +151,13 @@ function onClick(event) {
   raycaster.setFromCamera(mouse, camera);
 
   var intersects = raycaster.intersectObjects(scene.children, true);
+  const dispalyDetails = document.getElementsByClassName('display')[0]
 
   if (intersects.length > 0) {
 
     console.log('Intersection:', intersects[0]);
+    const dispalyDetails = document.getElementsByClassName('display')[0];
+    dispalyDetails.style.visibility='visible'
 
   }
 
