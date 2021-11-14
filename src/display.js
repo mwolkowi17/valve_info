@@ -8,3 +8,16 @@ display.style.width = "400px";
 display.style.fontSize = "30px";
 display.style.textAlign = "center";
 display.style.lineHeight = "1.8";
+
+const offButton = document.createElement('div')
+offButton.className = 'offButton'
+offButton.textContent= '[x]'
+
+display.appendChild(offButton);
+
+offButton.addEventListener("click", function() {
+   
+    const dispalyDetails = document.getElementsByClassName('display')[0];
+    dispalyDetails.style.visibility='hidden'
+
+})
