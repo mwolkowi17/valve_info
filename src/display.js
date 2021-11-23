@@ -11,7 +11,7 @@ display.style.lineHeight = "1.8";
 
 const offButton = document.createElement('div')
 offButton.className = 'offButton'
-offButton.textContent= '[x]'
+offButton.textContent= '[close details]'
 
 display.appendChild(offButton);
 
