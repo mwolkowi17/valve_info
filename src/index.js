@@ -3,7 +3,7 @@ import * as THREE from 'three';
 import * as OrbitControls from 'three-orbitcontrols';
 import { light2, light3, light4 } from './direct_light.js';
 import { mixer, action } from './loader';
-import { mixer2, action2, mixer3, action3, model_kurek, gltfLoader3 } from './loader2';
+import { mixer2, action2, mixer3, action3, model_kurek, testload} from './loader2';
 import { display } from './display';
 
 export const scene = new THREE.Scene();
@@ -24,6 +24,8 @@ scene.add(light3);
 scene.add(light3.target);
 scene.add(light4);
 scene.add(light4.target);
+scene.add(testload());
+
 
 
 let ifPlayed = false;
