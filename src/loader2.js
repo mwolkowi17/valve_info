@@ -25,7 +25,7 @@ gltfLoader2.load(model_kurek, (gltf) => {
 
 
 const model_kurek2 = "./zawor_kulowy_three_kula3_kurek_blue.glb";
-const gltfLoader3 = new GLTFLoader()
+export const gltfLoader3 = new GLTFLoader()
 
 gltfLoader3.load(model_kurek2, (gltf) => {
   root2 = gltf.scene;
