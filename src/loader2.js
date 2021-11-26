@@ -6,7 +6,7 @@ export let mixer2, mixer3;
 export let action2, action3;
 export let model_kurek;
 model_kurek = './zawor_kulowy_three_kula3_kurek.glb';
-export let root;
+let root;
 let root2;
 export function testload(){
   const gltfLoader2 = new GLTFLoader()
