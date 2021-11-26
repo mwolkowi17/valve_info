@@ -2,7 +2,7 @@ import { GLTFLoader } from '../node_modules/three/examples/jsm/loaders/GLTFLoade
 import * as THREE from 'three';
 import * as OrbitControls from 'three-orbitcontrols';
 import { light2, light3, light4 } from './direct_light.js';
-import { mixer, action } from './loader';
+//import { mixer, action } from './loader';
 import { mixer2, action2, mixer3, action3, model_kurek } from './loader2';
 import { display } from './display';
 
