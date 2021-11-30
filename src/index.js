@@ -152,7 +152,7 @@ function onClick(event) {
 
   raycaster.setFromCamera(mouse, camera);
 
-  var intersects = raycaster.intersectObjects(scene.children, true);
+  const intersects = raycaster.intersectObjects(scene.children, true);
   const dispalyDetails = document.getElementsByClassName('display')[0]
 
   if (intersects.length > 0) {
