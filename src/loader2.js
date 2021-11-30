@@ -8,7 +8,7 @@ export let model_kurek;
 model_kurek = './zawor_kulowy_three_kula3_kurek.glb';
 let root;
 let root2;
-export function testload(){
+
   const gltfLoader2 = new GLTFLoader()
   //gltfLoader2.load('./zawor_kulowy_three_move3.glb', (gltf) => {
   gltfLoader2.load(model_kurek, (gltf) => {
@@ -23,8 +23,7 @@ export function testload(){
   
   
   })
-  return root;
-}
+
 
 
 const model_kurek2 = "./zawor_kulowy_three_kula3_kurek_blue.glb";

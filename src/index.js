@@ -24,7 +24,7 @@ scene.add(light3);
 scene.add(light3.target);
 scene.add(light4);
 scene.add(light4.target);
-scene.add(testload());
+
 
 
 
