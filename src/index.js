@@ -100,6 +100,7 @@ const controls = new OrbitControls(camera, renderer.domElement);
 //camera.position.set( 0, 20, 100 );
 controls.update();
 controls.autoRotate = false;
+controls.enableDamping = true;
 renderer.domElement.addEventListener('dblclick', onClick, false);
 
 const clock = new THREE.Clock();
